@@ -7,12 +7,13 @@ import android.database.sqlite.SQLiteOpenHelper;
 /**
  * Created by u0151051 on 2017/4/6.
  */
-//->實作SQLiteOpenHelper抽象類別的兩個抽象方法(onCreate/onUpgrade)和建立建構子(因為SQLiteOpenHelper有有參數的建構子,卻沒有無參數的建構子)
+//實作SQLiteOpenHelper抽象類別的兩個抽象方法(onCreate/onUpgrade)和建立建構子(因為SQLiteOpenHelper有有參數的建構子,卻沒有無參數的建構子)
 public class MyDBHelp extends SQLiteOpenHelper {
     //命名資料庫名稱和資料庫版本
-    private static final String DATABASE_NAME = "todo";
+    private static final String DATABASE_NAME = "harry";
     private static final int DATABASE_VERSION = 1;
 
+    //super(content,資料名稱,(使用null，代表以標準模式SQLiteCursor處理Cursor),資料庫版本)
     public MyDBHelp(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
@@ -21,7 +22,7 @@ public class MyDBHelp extends SQLiteOpenHelper {
     @Override
     //在onCreate方法中，取得可寫入SQLiteDatabase物件後，呼叫execSQL方法建立exp表格
     public void onCreate(SQLiteDatabase db) {
-        String sql = "CREATE TABLE todos (" +
+        String sql = "CREATE TABLE student (" +
                 " _id INTEGER PRIMARY KEY," +
                 " name TEXT," +
                 " score REAL)";

@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Database</string>
-    <string name="number">學號</string>
-    <string name="name">姓名</string>
-    <string name="score">成績</string>
+    <string name="number">學號:</string>
+    <string name="name">姓名:</string>
+    <string name="score">成績:</string>
     <string name="add">新增</string>
     <string name="update">修改</string>
     <string name="select">查詢</string>
